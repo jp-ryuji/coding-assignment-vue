@@ -1,18 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="container">
+    <b-table :data="users" :columns="columns"></b-table>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import titanic from "@/assets/titanic.json";
 
 export default Vue.extend({
   name: "Home",
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+      users: titanic,
+      columns: [
+        {
+          field: "name",
+          label: "Name"
+        },
+        {
+          field: "sex",
+          label: "Sex"
+        },
+        {
+          field: "age",
+          label: "Age"
+        }
+      ]
+    };
+  },
 });
 </script>
