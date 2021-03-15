@@ -1,5 +1,5 @@
 <template>
-  <b-navbar :mobile-burger="false">
+  <b-navbar :mobile-burger="false" wrapper-class="container" type="is-primary">
     <template #brand>
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         VueSample
@@ -14,4 +14,4 @@ import Vue from "vue";
 export default Vue.extend({});
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped></style>
